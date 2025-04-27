@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { ElevenLabsClient } from "elevenlabs"; // make sure you installed this
 
-const backendUrl = "http://localhost:4001";
+const backendUrl = "https://yuri2-back.vercel.app";
 
 const elevenLabsApiKey = 'sk_c0017739b918d0a0da1b69d457e19f3adfef46f5150caf0c';
 const voiceId = "21m00Tcm4TlvDq8ikWAM"; // your ElevenLabs voice id
