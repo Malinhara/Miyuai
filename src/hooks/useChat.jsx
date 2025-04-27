@@ -68,6 +68,12 @@ export const ChatProvider = ({ children }) => {
     const playAudio = async () => {
       if (messages.length > 0) {
         const latestMessage = messages[messages.length - 1];
+  
+        if (!latestMessage.message || latestMessage.message.length >= 150) {
+          // If no message or message is too long, skip voice
+          setMessage(latestMessage);
+          return;
+        }
 
         try {
           const stream = await textToSpeech(latestMessage.message);
