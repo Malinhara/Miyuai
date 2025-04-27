@@ -24,7 +24,7 @@ export const ChatProvider = ({ children }) => {
     setError(null);
 
     try {
-      const response = await fetch(`${backendUrl}/chat`, {
+      const response = await fetch(`https://yuri2-back.vercel.app/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
