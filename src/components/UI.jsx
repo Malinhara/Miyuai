@@ -134,7 +134,7 @@ export const UI = ({ hidden, ...props }) => {
         >
           <div>
             <a
-              href="Home"
+              href="/"
               className="text-white font-medium hover:text-gray-300 transition-colors duration-200"
               style={{ fontFamily: "'ZCOOL QingKe HuangYou', sans-serif", fontWeight: "bold" }}
             >
