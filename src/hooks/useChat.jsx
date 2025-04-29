@@ -34,7 +34,7 @@ export const ChatProvider = ({ children }) => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || `Sorry, your prompt is not clear`);
+        throw new Error(errorData.message || `Sorry, your prompt is not clear. Example: analyze token, wallet profile details for given address, top token, etc.`);
       }
 
       const resp = await response.json();
@@ -45,7 +45,7 @@ export const ChatProvider = ({ children }) => {
       }
     } catch (error) {
       console.error("Chat API Error:", error);
-      setError(error.message);
+      setError("Sorry, your prompt is not clear. Example: analyze token, wallet profile details for given address, top token, etc.");
     } finally {
       setLoading(false);
     }
