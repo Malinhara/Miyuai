@@ -34,7 +34,7 @@ export const ChatProvider = ({ children }) => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || `HTTP error! Status: ${response.status}`);
+        throw new Error(errorData.message || `Sorry, your prompt is not clear`);
       }
 
       const resp = await response.json();
