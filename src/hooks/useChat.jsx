@@ -43,18 +43,18 @@ export const ChatProvider = ({ children }) => {
       if (resp.success) {
         setMessages((prevMessages) => [...prevMessages, resp]);
       }
-    } catch (error) {
-     console.error("Chat API Error:", error);
+    } catch (err) {
+    console.error("Chat API Error:", err.message);
 
-    const fallbackMessage = {
-    role: "Miyu",
-    content: "Sorry, your prompt is not clear. Example: analyze token, wallet profile details for given address, top token, etc.",
-  };
-
-  // Add the fallback message to the chat history
-  setMessages((prevMessages) => [...prevMessages, fallbackMessage]);
-
-} finally {
+    // Add fallback message
+    setMessages((prev) => [
+      ...prev,
+      {
+        message:
+          "Sorry, your prompt is not clear. Example: analyze token, wallet profile details for given address, top token, etc.",
+      },
+    ]);
+  }  finally {
       setLoading(false);
     }
   };
