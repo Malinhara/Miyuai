@@ -51,7 +51,7 @@ export const ChatProvider = ({ children }) => {
       ...prev,
       {
         message:
-          "Hmm, I couldn't understand that. You can try something like:\n\n• Analyse a token\n• Get wallet profile details for a specific address\n• Show top tokens n\nFeel free to ask me anything related to tokens or general questions!",
+          "Hmm, I couldn't understand that. You can try something like:- Analyse a token, Get wallet profile details for a specific address, Show top tokens and Feel free to ask me anything related to tokens or general questions!",
       },
     ]);
   }  finally {
@@ -77,7 +77,7 @@ export const ChatProvider = ({ children }) => {
       if (messages.length > 0) {
         const latestMessage = messages[messages.length - 1];
   
-        if (!latestMessage.message || latestMessage.message.length >= 150) {
+        if (!latestMessage.message || latestMessage.message.length >= 250) {
           // If no message or message is too long, skip voice
           setMessage(latestMessage);
           return;
