@@ -51,7 +51,7 @@ export const ChatProvider = ({ children }) => {
       ...prev,
       {
         message:
-          "Sorry, your prompt is not clear. Example: analyze token, wallet profile details for given address, top token, etc.",
+          "Hmm, I couldn't understand that. You can try something like:\n\n• Analyse a token\n• Get wallet profile details for a specific address\n• Show top tokens n\nFeel free to ask me anything related to tokens or general questions!",
       },
     ]);
   }  finally {
